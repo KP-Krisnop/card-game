@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Card Machine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/error.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>HEARTBEAT</h1>
+        <button id="game-button" tabindex="-1">Start</button>
+
+        <div class="game-page-overlay" id="game-page-overlay">
+            <div class="new-game-page" id="new-game-page">
+                <div class="circle-container">
+                    <div class="circle" id="circle">
+                        <!-- inquiries -->
+                        <div class="inquiry active" id="inquiry">
+                            <h5 id="direction-text">Fill in all players in order regardless of the first player.</h5>
+                        </div>
+                        <div class="inquiry" id="inquiry">
+                            <h5 id="direction-text">Select your <span class="color-lable">1st</span> and <span
+                                    class="color-lable">2nd</span> player or use Auto Random.</h5>
+                            <button class="rand-ply-btn" id="rand-ply-btn">Auto Random</button>
+                        </div>
+                        <div class="inquiry" id="inquiry">
+                            <h5 id="direction-text">Select direction where machine will be facing.</h5>
+                        </div>
+                        <div class="inquiry" id="inquiry">
+                            <h3 id="direction-text">All set!</h3>
+                        </div>
+                        <!-- inquiries -->
+                    </div>
+                    <input type="text" class="player-input-1" id="player-input" placeholder="Player 1"
+                        autocomplete="off">
+                    <input type="text" class="player-input-2" id="player-input" placeholder="Player 2"
+                        autocomplete="off">
+                    <input type="text" class="player-input-3" id="player-input" placeholder="Player 3"
+                        autocomplete="off">
+                    <input type="text" class="player-input-4" id="player-input" placeholder="Player 4"
+                        autocomplete="off">
+                </div>
+                <button class="next-button" id="next-button">Next</button>
+                <button class="previous-button" id="previous-button">Cancel</button>
+            </div>
+        </div>
+        <div class="game-page-overlay" id="game-page-overlay">
+            <div class="end-game-page">
+                <h1>Score Rank</h1>
+                <div class="score-card-container">
+                    <div class="score-card">
+                        <h4 id="player-rank-name">Player 1</h4>
+                        <div class="card" id="card">
+                            <h1 id="player-rank-score">-100</h1>
+                        </div>
+                    </div>
+                    <div class="score-card">
+                        <h4 id="player-rank-name">Player 2</h4>
+                        <div class="card" id="card">
+                            <h1 id="player-rank-score">-100</h1>
+                        </div>
+                    </div>
+                    <div class="score-card">
+                        <h4 id="player-rank-name">Player 3</h4>
+                        <div class="card" id="card">
+                            <h1 id="player-rank-score">-100</h1>
+                        </div>
+                    </div>
+                    <div class="score-card">
+                        <h4 id="player-rank-name">Player 4</h4>
+                        <div class="card" id="card">
+                            <h1 id="player-rank-score">-100</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="exit-button" id="exit-button">Exit</button>
+        </div>
+    </header>
+    <section id="section">
+        <div class="score-display">
+            <div class="score-display-headder">
+                <h5 class="round-heading" id="round-number">Round 1</h5>
+                <button class="continue-button" id="continue-button" tabindex="2">Continue</button>
+            </div>
+            <div class="score-module-container">
+                <div class="score-module">
+                    <h4 class="player-name" id="player-name">Player 1</h4>
+                    <h1 class="score" id="score">-</h1>
+                    <div class="score-change">
+                        <h5 id="score-change">-</h5>
+                    </div>
+                </div>
+                <div class="score-module">
+                    <h4 class="player-name" id="player-name">Player 2</h4>
+                    <h1 class="score" id="score">-</h1>
+                    <div class="score-change">
+                        <h5 id="score-change">-</h5>
+                    </div>
+                </div>
+                <div class="score-module">
+                    <h4 class="player-name" id="player-name">Player 3</h4>
+                    <h1 class="score" id="score">-</h1>
+                    <div class="score-change">
+                        <h5 id="score-change">-</h5>
+                    </div>
+                </div>
+                <div class="score-module">
+                    <h4 class="player-name" id="player-name">Player 4</h4>
+                    <h1 class="score" id="score">-</h1>
+                    <div class="score-change">
+                        <h5 id="score-change">-</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="score-input-control">
+            <h5 class="score-heading">Input</h5>
+            <div class="score-input-container">
+                <input type="number" name="" id="score-input" placeholder="Player 1" tabindex="1">
+                <input type="number" name="" id="score-input" placeholder="Player 2" tabindex="1">
+                <input type="number" name="" id="score-input" placeholder="Player 3" tabindex="1">
+                <input type="number" name="" id="score-input" placeholder="Player 4" tabindex="1">
+            </div>
+        </div>
+        <div class="machine-control">
+            <h5 class="score-heading">Machine Control</h5>
+            <div class="component-container">
+                <input class="code-input" type="number" name="" id="machine-code-input" placeholder="machine code">
+                <button id="machine-connect-button" tabindex="3">Connect</button>
+                <div class="machine-status">
+                    <p id="machine-status">No Connection</p>
+                </div>
+                <div class="machine-param-container">
+                    <p>Cards</p>
+                    <input type="number" name="" id="card-number-input" value="13" tabindex="-1">
+                    <p>Direction</p>
+                    <select name="" id="direction-input">
+                        <option value="1">CW</option>
+                        <option value="-1">CCW</option>
+                    </select>
+                    <p>Turn</p>
+                    <select name="" id="turn-input">
+                        <option value="0">Player 1</option>
+                        <option value="1">Player 2</option>
+                        <option value="2">Player 3</option>
+                        <option value="3">Player 4</option>
+                    </select>
+                </div>
+                <button class="deal-button" id="deal-button" tabindex="2">Deal</button>
+            </div>
+        </div>
+    </section>
+    <div>
+        <div class="error-message" id="error-message">
+            <h5>Game is not started</h5>
+            <p>Click the start button</p>
+        </div>
+        <div class="error-message" id="error-message">
+            <h5>Please fill in the player</h5>
+            <p>Type all player names into gaps</p>
+        </div>
+        <div class="error-message" id="error-message">
+            <h5>Please select 2 players</h5>
+            <p>Click on the box or press Auto Random</p>
+        </div>
+        <div class="error-message" id="error-message">
+            <h5>Please select the player</h5>
+            <p>Click on the box</p>
+        </div>
+        <div class="error-message" id="error-message">
+            <h5>Please fill in the scores</h5>
+            <p>Use TAB to change box</p>
+        </div>
+        <div class="error-message" id="error-message">
+            <h5>Machine is not connected</h5>
+            <p>Turn on the machine and press Connect</p>
+        </div>
+    </div>
+
+
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/machine.js" defer></script>
+    <script src="scripts/error.js" defer></script>
+</body>
+
+</html>

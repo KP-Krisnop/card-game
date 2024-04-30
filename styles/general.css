@@ -1,0 +1,128 @@
+:root {
+    /* colors */
+    --text: #13110f;
+    --soft-text: #8a715a;
+    --background: #ffead6;
+    --primary: #c4a88d;
+    --secondary: #e2cab2;
+    --accent: #b29b86;
+    --accent-red: #e65e69;
+    --x-accent-red: #d44955;
+    --soft-color: #ead5c2;
+    --x-soft-color: #f2decb;
+    /* spaces */
+    --xs-space: 4px;
+    --s-space: 8px;
+    --m-space: 16px;
+    --l-space: 32px;
+    --xl-space: 64px;
+    --xxl-space: 128px;
+    /* radius */
+    --xs-radius: 8px;
+    --s-radius: 16px;
+    --m-radius: 24px;
+    --l-radius: 32px;
+    --xl-radius: 40px;
+    --xxl-radius: 48px;
+}
+
+html {
+    background-color: var(--background);
+    font-family: 'Outfit';
+    font-weight: 400;
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 4.210rem;
+    margin: 0;
+    color: var(--text);
+}
+
+h2 {
+    font-size: 3.158rem;
+    color: var(--text);
+}
+
+h3 {
+    font-size: 2.369rem;
+    color: var(--text);
+}
+
+h4 {
+    font-size: 1.777rem;
+    color: var(--text);
+}
+
+h5 {
+    font-size: 1.333rem;
+    color: var(--text);
+}
+
+small {
+    font-size: 0.750rem;
+    color: var(--text);
+}
+
+p {
+    color: var(--text);
+}
+
+input {
+    border: none;
+    font-family: "Outfit";
+    color: var(--text);
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    background-color: var(--secondary);
+}
+
+input::placeholder {
+    color: var(--accent);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+body {
+    width: 85%;
+    margin: auto;
+}
+
+button {
+    font-family: "Outfit";
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--primary);
+    border: none;
+    border-radius: var(--xs-radius);
+    height: 52px;
+    width: 150px;
+    transition: all 0.15s;
+}
+
+button:hover {
+    transform: scale(103%);
+}
+
+button:focus-visible {
+    transform: scale(103%);
+    background-color: var(--accent-red);
+    outline: none;
+}
+
+select {
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    font-family: "Outfit";
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    outline: none;
+    width: auto;
+}

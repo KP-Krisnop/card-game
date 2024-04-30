@@ -1,0 +1,205 @@
+section {
+    margin-top: var(--xl-space);
+    height: 660px;
+    display: flex;
+    gap: var(--m-space);
+}
+
+/* ////////// Score Display //////////*/
+
+.score-display {
+    background: var(--soft-color);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: var(--l-radius);
+}
+
+.score-display-headder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.continue-button {
+    margin: var(--m-space);
+    border-radius: var(--m-radius);
+}
+
+.continue-button:focus-visible {
+    background-color: var(--accent-red);
+    outline: none;
+}
+
+.round-heading {
+    margin: var(--l-space);
+}
+
+.score-module-container {
+    display: flex;
+    gap: var(--m-space);
+    margin: var(--m-space);
+    margin-top: 0;
+    flex: 1;
+}
+
+.score-module {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--secondary);
+    height: auto;
+    flex: 1;
+    border-radius: var(--m-radius);
+}
+
+.score-module .player-name {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 0;
+}
+
+.score-module .player-name.valued {
+    color: var(--text);
+}
+
+.score-module .score {
+    text-align: center;
+    font-size: 4.75rem;
+    color: var(--accent);
+}
+
+.score-module .score.valued {
+    color: var(--text);
+}
+
+
+.score-module .score-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    height: 64px;
+    border-radius: var(--s-radius);
+    margin: var(--m-space);
+}
+
+/* ////////// Input //////////*/
+
+.score-input-control {
+    background: var(--soft-color);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    border-radius: var(--l-radius);
+}
+
+.score-input-control h5 {
+    text-align: center;
+    margin: var(--l-space);
+    margin-bottom: var(--l-space);
+}
+
+.score-input-container {
+    background: var(--soft-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--m-space);
+    flex: 1;
+    width: auto;
+    border-radius: var(--l-radius);
+    margin-bottom: var(--m-space);
+}
+
+.score-input-container input {
+    margin-left: var(--m-space);
+    margin-right: var(--m-space);
+    border-radius: var(--m-radius);
+    width: 160px;
+    flex: 1;
+    font-size: 2.369rem;
+    font-weight: 700;
+}
+
+.score-input-container input::placeholder {
+    flex: 1;
+    font-size: 1.777rem;
+    font-weight: 700;
+}
+
+/* ////////// Machine Control //////////*/
+
+.machine-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--soft-color);
+    width: auto;
+    border-radius: var(--l-radius);
+}
+
+.machine-control h5 {
+    text-align: center;
+    margin: var(--l-space);
+    margin-bottom: var(--l-space);
+}
+
+.component-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--m-space);
+    flex: 1;
+    margin: var(--m-space);
+    margin-top: 0;
+}
+
+.component-container .code-input {
+    width: auto;
+    height: 52px;
+    border-radius: var(--s-radius);
+}
+
+.component-container button {
+    width: auto;
+    border-radius: var(--s-radius);
+    font-weight: 700;
+}
+
+.component-container .machine-status {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--s-radius);
+    transition: all 1s;
+}
+
+.component-container .machine-param-container {
+    background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-items: center;
+    align-items: center;
+    border-radius: var(--s-radius);
+}
+
+.component-container .machine-param-container p {
+    font-weight: 700;
+    margin-left: var(--m-space);
+}
+
+.component-container .machine-param-container input {
+    width: 54px;
+}
+
+.component-container .deal-button {
+    width: auto;
+    flex: 1;
+    font-size: 3.158rem;
+    font-weight: 700;
+}
+
+.component-container .deal-button:focus-visible {
+    background-color: var(--accent-red);
+    outline: none;
+}

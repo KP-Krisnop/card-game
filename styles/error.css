@@ -1,0 +1,35 @@
+.error-message {
+    background-color: var(--secondary);
+    border-radius: var(--xxl-radius);
+    padding: var(--m-space) var(--xl-space);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xs-space);
+    position: absolute;
+    left: 50vw;
+    top: -100px;
+    transform: translateX(-50%);
+    transition: all 0.25s ease-out;
+}
+
+.error-message h5 {
+    margin: 0;
+}
+
+.error-message p {
+    margin: 0;
+    color: var(--soft-text);
+}
+
+.error-message:nth-child(2),
+.error-message:nth-child(3),
+.error-message:nth-child(4) {
+    left: 232px;
+}
+
+.error-message.alert {
+    transform: translateX(-50%);
+    top: var(--l-space);
+}

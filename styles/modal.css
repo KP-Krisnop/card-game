@@ -1,0 +1,226 @@
+.game-page-overlay {
+    background-color: var(--x-soft-color);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    display: none;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.game-page-overlay.open {
+    top: 0;
+}
+
+.new-game-page {
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.new-game-page.open {
+    display: flex;
+}
+
+.circle {
+    background-color: var(--secondary);
+    height: 460px;
+    width: 460px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--s-space);
+    margin: auto;
+}
+
+.circle h5 {
+    text-align: center;
+    max-width: 300px;
+    margin: var(--m-space);
+}
+
+.circle button {
+    width: 180px;
+}
+
+.circle p {
+    color: var(--primary);
+    margin: 0;
+}
+
+.circle .color-lable:nth-child(1) {
+    color: var(--accent-red);
+}
+
+.circle .color-lable:nth-child(2) {
+    color: var(--primary);
+}
+
+.new-game-page input {
+    background-color: transparent;
+    padding: var(--l-space) var(--s-space);
+    height: 42px;
+    width: 164px;
+    flex: 1;
+    font-size: 1.777rem;
+    font-weight: 700;
+    border-radius: var(--l-radius);
+    transition: all 0.15s;
+}
+
+.new-game-page input::placeholder {
+    flex: 1;
+    font-size: 1.777rem;
+    font-weight: 700;
+}
+
+.new-game-page input[readonly] {
+    background-color: var(--secondary);
+    opacity: 0.5;
+}
+
+.new-game-page input.selected-0 {
+    background-color: var(--accent-red);
+    opacity: 1;
+}
+
+.new-game-page input.selected-1 {
+    background-color: var(--primary);
+    opacity: 1;
+}
+
+.new-game-page input.selected-2 {
+    border: var(--s-space) solid var(--x-accent-red);
+    box-sizing: content-box;
+    opacity: 1;
+}
+
+.player-input-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-340px, -50%) translateX(-50%);
+}
+
+.player-input-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) translateY(-303px);
+}
+
+.player-input-3 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(340px, -50%) translateX(50%);
+}
+
+.player-input-4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) translateY(303px);
+}
+
+.inquiry {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.inquiry.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--s-space);
+    opacity: 1;
+    margin: auto;
+}
+
+.previous-button {
+    position: absolute;
+    bottom: var(--l-space);
+    left: var(--l-space);
+    z-index: 1000;
+}
+
+.next-button {
+    position: absolute;
+    bottom: var(--l-space);
+    right: var(--l-space);
+}
+
+.end-game-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.end-game-page h1 {
+    margin: var(--xl-space);
+}
+
+.score-card-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--l-space);
+    flex: 1;
+    margin-bottom: var(--l-space);
+}
+
+.score-card {
+    width: 200px;
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.score-card h4 {
+    margin: var(--m-space);
+}
+
+.card {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: var(--m-radius);
+}
+
+.score-card-container .score-card:nth-child(1) .card {
+    height: 100%;
+}
+
+.score-card-container .score-card:nth-child(2) .card {
+    height: 60%;
+}
+
+.score-card-container .score-card:nth-child(3) .card {
+    height: 36%;
+}
+
+.score-card-container .score-card:nth-child(4) .card {
+    height: 20%;
+}
+
+.exit-button {
+    position: absolute;
+    bottom: var(--l-space);
+    right: var(--l-space);
+    background-color: var(--accent-red);
+}
